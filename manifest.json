@@ -1,0 +1,24 @@
+{
+    "manifest_version" : 3,
+    "name" : "MITube",
+    "version" : "0.0.1",
+    "action": {
+        "default_icon" : "icon.png",
+        "default_popup": "popup.html",
+        "default_title" : "MITube"
+    },
+    "content_scripts" : [
+        {
+            "matches" : ["*://*.youtube.com/"],
+            "js" : ["content_main.js"]
+        }
+    ],
+    "icons":{
+        "128" : "icon.png" 
+    },
+    "permissions": [
+        "storage",
+        "tabs"
+      ],
+    "description": "Extension that allows user to filter their YouTube Homepage Recommendations."
+}

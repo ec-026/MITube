@@ -1,0 +1,153 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+body {
+    padding: 1px;
+    padding-bottom: 1.4px;
+    width: 450px;
+    background: radial-gradient(circle at 100% 5%, #ebdcbc 17%, #fed16e 35%, #ffae00 44%);
+}
+
+.categories
+{
+    display: grid;
+    width: 71%;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.container
+{
+    background: radial-gradient(circle at 90% 5%, rgba(123,123,123,1) 0%, rgba(50,50,50,1) 26%, rgba(0,0,0,1) 52%);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.btn-circle {
+    background-color: blue;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
+.title
+{
+
+    font-size: 5vw;
+    color: rgba(0,0,0,1);
+    -webkit-text-stroke: 0.2vw #383d52;
+    font-weight: bold;
+
+}
+.title::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #ffae00;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #ffae00;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+.title-pos
+{
+    margin: 4px 0 12px 0;
+}
+.buttons
+{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 33px;;
+}
+
+.button
+{
+    display: none;
+}
+.button-label
+{
+    background-color: #eee;
+    text-align: center;
+    padding:17px 5px 3px 5px;
+    border-radius: 100%;
+}
+
+.button-label:hover
+{
+    color: #fff;
+}
+
+.button-label:active
+{
+    color: #fff ;
+}
+.button-r:hover
+{
+    background-color: #ec6060;
+}
+
+.button-r:active
+{
+    background-color: #ff0000;
+}
+.button-s:hover
+{
+    background-color: #9cf085;
+}
+
+.button-s:active
+{
+    background-color: #09ff00;
+}
+.button-re:hover
+{
+    background-color: #7c6cf2;
+}
+
+.button-re:active
+{
+    background-color: #1100ff;
+}
+
+.custom-control-label {
+    background-color: #eee;
+    text-align: center;
+    padding:28px 8px 6px 8px;
+    border-radius: 100%;
+    transition: background-color .1s linear, color .1s linear;
+  }
+
+svg path{ fill: currentColor; }
+.custom-control-input {
+    display: none;
+}
+  .custom-control-input:checked~.custom-control-label {
+    background: #ffae00;
+    color: #fff;
+  }
+.logo-wrapper {
+  color: black;
+}
